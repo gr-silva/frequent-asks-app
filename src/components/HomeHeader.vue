@@ -1,9 +1,7 @@
 <template>
-  <div class="container">
-    <img src="@/assets/images/astronaut.svg" alt="Astronaut" />
-    <h1>Perguntas Frequentes</h1>
-    <p>Escolha a categoria desejada</p>
-  </div>
+  <img src="@/assets/images/astronaut.svg" alt="Astronaut" />
+  <h1 class="header-title">Perguntas Frequentes</h1>
+  <h5 class="header-subtitle">Escolha a categoria desejada</h5>
 </template>
 
 <script lang="ts">
@@ -12,23 +10,8 @@ import { defineComponent } from 'vue'
 export default defineComponent({})
 </script>
 
-<style scoped>
-.container {
-  top: 312px;
-  left: 695px;
-  width: 305px;
-  height: 457px;
-  background: transparent
-    linear-gradient(180deg, #404451 0%, var(--unnamed-color-26282c) 100%) 0% 0%
-    no-repeat padding-box;
-  background: transparent linear-gradient(180deg, #404451 0%, #26282c 100%) 0%
-    0% no-repeat padding-box;
-  box-shadow: 0px 10px 30px #3f445266;
-  border-radius: 15px;
-  opacity: 1;
-}
-
-h1 {
+<style>
+.header-title {
   margin-left: 36px;
   margin-bottom: 7px;
   top: 462px;
@@ -43,7 +26,7 @@ h1 {
   opacity: 1;
 }
 
-p {
+.header-subtitle {
   top: 493px;
   left: 731px;
   width: 162px;
