@@ -18,7 +18,6 @@ export default defineComponent({})
   left: 731px;
   width: 100%;
   height: 24px;
-  color: var(--unnamed-color-f5f6f8);
   text-align: left;
   font: normal normal bold 20px/24px Lato;
   letter-spacing: 0px;
@@ -34,7 +33,6 @@ export default defineComponent({})
   margin-left: 36px;
   margin-right: 107px;
   margin-top: 0px;
-  color: var(--unnamed-color-f5f6f8);
   text-align: left;
   font: normal normal normal 13px/16px Lato;
   letter-spacing: 0px;
