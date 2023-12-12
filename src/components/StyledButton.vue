@@ -1,6 +1,6 @@
 <template>
   <button class="styled-button">
-    <div class="slot">
+    <div class="slot-and-text">
       <img v-if="hasSlot" :src="imagePath" class="slot-icon" />
       <span class="text-of-styled-button">{{ text }}</span>
     </div>
@@ -20,7 +20,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.slot {
+.slot-and-text {
   display: flex;
 }
 .styled-button {
