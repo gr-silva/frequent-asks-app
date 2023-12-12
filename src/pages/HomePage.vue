@@ -1,14 +1,15 @@
 <template>
   <div class="container">
     <HomeHeader />
-    <StyledButton
-      v-for="{ title, icon } in $data"
-      :text="title"
-      :hasSlot="true"
-      :imagePath="icon"
-      :key="title"
-    >
-    </StyledButton>
+    <div class="styled-buttons">
+      <StyledButton
+        v-for="{ title, icon } in $data"
+        :key="title"
+        :text="title"
+        :hasSlot="true"
+        :imagePath="icon"
+      />
+    </div>
   </div>
 </template>
 
@@ -24,19 +25,19 @@ export default defineComponent({
     return [
       {
         title: 'Basecamp',
-        icon: '@/assets/images/rocket.svg'
+        icon: 'rocket.svg'
       },
       {
         title: 'Bootcamp',
-        icon: '@/assets/images/astronaut-helmet.svg'
+        icon: 'astronaut-helmet.svg'
       },
       {
         title: 'Cataline',
-        icon: '@/assets/images/student-hat.svg'
+        icon: 'student-hat.svg'
       },
       {
         title: 'Parcerias',
-        icon: '@/assets/images/partnership.svg'
+        icon: 'partnership.svg'
       }
     ] as IHomeButtons[]
   }
@@ -48,9 +49,6 @@ export default defineComponent({
   left: 695px;
   width: 305px;
   height: 457px;
-  background: transparent
-    linear-gradient(180deg, #404451 0%, var(--unnamed-color-26282c) 100%) 0% 0%
-    no-repeat padding-box;
   background: transparent linear-gradient(180deg, #404451 0%, #26282c 100%) 0%
     0% no-repeat padding-box;
   box-shadow: 0px 10px 30px #3f445266;
