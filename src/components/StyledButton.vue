@@ -1,8 +1,7 @@
 <template>
   <button class="styled-button">
-    <!--FIXME: CORRIGIR BUG TAMANHO SLOT  -->
-    <div class="w-full">
-      <slot v-if="hasSlot" class="slot-icon" />
+    <div class="slot">
+      <img v-if="hasSlot" :src="imagePath" class="slot-icon" />
       <span class="text-of-styled-button">{{ text }}</span>
     </div>
   </button>
@@ -11,12 +10,21 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-export default defineComponent({ props: { text: String, hasSlot: Boolean } })
+export default defineComponent({
+  props: {
+    text: String,
+    hasSlot: Boolean,
+    imagePath: String
+  }
+})
 </script>
 
 <style scoped>
+.slot {
+  display: flex;
+}
 .styled-button {
-  margin-left: 5px;
+  margin-left: 6px;
   margin-right: 6px;
   margin-top: 32px;
 
@@ -38,21 +46,23 @@ export default defineComponent({ props: { text: String, hasSlot: Boolean } })
   width: 18px;
   height: 22px;
 
-  border: 1px solid var(--unnamed-color-22e0db);
-  border: 1px solid #22e0db;
+  margin-top: 17px;
+  margin-bottom: 15.29px;
+  margin-left: 32.25px;
+
   opacity: 1;
 }
 
 .text-of-styled-button {
   top: 611px;
   left: 786px;
-  width: 72px;
-  height: 19px;
+  width: 21px;
+  height: 21px;
 
-  padding-top: 17px;
-  padding-bottom: 17px;
-  padding-left: 85px;
-  padding-right: 137px;
+  margin-top: 17px;
+  margin-bottom: 17px;
+  margin-left: 31.73px;
+  margin-right: 137px;
 
   text-align: left;
   font: normal normal normal 16px/19px Lato;

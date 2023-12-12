@@ -1,17 +1,45 @@
 <template>
   <div class="container">
     <HomeHeader />
-    <ButtonsWithSlots text="Basecamp"> </ButtonsWithSlots>
+    <StyledButton
+      v-for="{ title, icon } in $data"
+      :text="title"
+      :hasSlot="true"
+      :imagePath="icon"
+      :key="title"
+    >
+    </StyledButton>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import HomeHeader from '@/components/HomeHeader.vue'
-import ButtonsWithSlots from '@/components/ButtonsWithSlots.vue'
+import StyledButton from '@/components/StyledButton.vue'
+import { IHomeButtons } from '@/types/HomeInterfaces'
 
 export default defineComponent({
-  components: { HomeHeader, ButtonsWithSlots }
+  components: { HomeHeader, StyledButton },
+  data() {
+    return [
+      {
+        title: 'Basecamp',
+        icon: '@/assets/images/rocket.svg'
+      },
+      {
+        title: 'Bootcamp',
+        icon: '@/assets/images/astronaut-helmet.svg'
+      },
+      {
+        title: 'Cataline',
+        icon: '@/assets/images/student-hat.svg'
+      },
+      {
+        title: 'Parcerias',
+        icon: '@/assets/images/partnership.svg'
+      }
+    ] as IHomeButtons[]
+  }
 })
 </script>
 <style scoped>
