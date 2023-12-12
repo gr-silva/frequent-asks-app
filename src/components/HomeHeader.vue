@@ -1,7 +1,9 @@
 <template>
-  <img src="@/assets/images/astronaut.svg" alt="Astronaut" />
-  <h1 class="header-title">Perguntas Frequentes</h1>
-  <h5 class="header-subtitle">Escolha a categoria desejada</h5>
+  <div class="header">
+    <img src="@/assets/images/astronaut.svg" alt="Astronaut" />
+    <h1 class="header-title">Perguntas Frequentes</h1>
+    <h5 class="header-subtitle">Escolha a categoria desejada</h5>
+  </div>
 </template>
 
 <script lang="ts">
