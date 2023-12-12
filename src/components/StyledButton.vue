@@ -26,7 +26,6 @@ export default defineComponent({
 .styled-button {
   margin-left: 6px;
   margin-right: 6px;
-  margin-top: 32px;
 
   top: 541px;
   left: 701px;

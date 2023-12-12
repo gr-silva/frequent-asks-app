@@ -33,6 +33,7 @@ export default defineComponent({})
   margin-left: 36px;
   margin-right: 107px;
   margin-top: 0px;
+  margin-bottom: 32px;
   text-align: left;
   font: normal normal normal 13px/16px Lato;
   letter-spacing: 0px;
